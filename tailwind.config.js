@@ -7,7 +7,7 @@ module.exports = {
     extend: {
       backgroundImage:{
         blur: 'url(/src/assents/blur-background.png)',
-        item1: 'url(/src/assents/code-mockup.png)', 
+        
 
       },
       fontFamily: {

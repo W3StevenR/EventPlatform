@@ -73,8 +73,8 @@ return(
 
             </div>
                 
-        
-        <img src ="/src/assents/code-mockup.png" className="mt-10" alt=""/>
+        <div className="bg-tem1 mt-10"/>
+                
          </div>
 );
 

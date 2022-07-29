@@ -46,7 +46,7 @@ export function Lesson (props: LessonProps){
             Conteudo Liberado
             </span>
         ) : (
-          <span className="text-sm text-orange-500 font-medium flex items-center gap-2">
+          <span className="text-sm text-orange-500 font-medium flex items-center gap-2 disabled:true">
         <Lock size={20} />
           Em breve
           </span>

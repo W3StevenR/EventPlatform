@@ -35,7 +35,7 @@ export function Sidebar(){
       <span className="font-bold text-2xl pb-6 mb-6 border-b border-gray-500 block" >
         Cronograma de Aulas
       </span>
-      <div className =" flex flex-col gap-8 ">
+      <div className =" flex flex-col gap-8 display block ">
         
         {data?.lessons.map(lesson => {
           //"?" pq data demora para ser preenchido. 

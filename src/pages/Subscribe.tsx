@@ -72,7 +72,7 @@ return(
             </div>
 
             </div>
-        <img src ="Img1" className="mt-0" alt=""/>
+            <img src = {Img1} className="mt-0" alt=""/>
          </div>
 );
 

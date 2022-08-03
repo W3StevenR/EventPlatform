@@ -9,16 +9,24 @@ interface LessonProps {
   availableAt: Date;
   type:'live' |'class';
 }
+
 export function Lesson (props: LessonProps){
-  const{slug} = useParams<{slug: string}>()
-  const isLessonAvailable = isPast(props.availableAt)
-  const availableDateFormat = format(props.availableAt, "EEEE' • 'd' de 'MMMM' • 'k'h'mm' ", {locale: ptBR,})
+  const{slug} = useParams<{slug: string}>();
+  const isLessonAvailable = isPast(props.availableAt);
+  const availableDateFormat = format(props.availableAt, "EEEE' • 'd' de 'MMMM' • 'k'h'mm' ", {locale: ptBR,});
   
   const isActiveLesson = slug==props.slug;
+ 
 
+
+ function _onClick(e: { preventDefault: () => void; }) {
+  if(!isLessonAvailable){
+  e.preventDefault()}
+ } 
 
   //Quando se quer colocar um texto que não será formatado se coloca aspas simples  por isso as duplas
   return(
+    
     //OBSERVACOES 
     //Aqui pode ser pensado futuramente em um botão mais personalizado  
     // px e py-2 seria aplicar pading em todos os lados
@@ -27,12 +35,12 @@ export function Lesson (props: LessonProps){
      //{props.type  == 'live' ? 'AO VIVO' : 'AULA PRATICA'} Condicional se;então;senão
     // link to=${}  -> Interpolação
 
-   <Link to={`/event/lesson/${props.slug}`} data-aos="fade-left" className="group">
+   <Link to={`/event/lesson/${props.slug}`} data-aos="fade-left" className="group" onClick={ e => _onClick(e) }>
     <span className="text-gray-300">
       {availableDateFormat}
     </span>
     
-    <div className={classNames('rounded border border-gray-500 p-4 mt-2 group-hover:border-green-500',{
+    <div className={classNames('rounded border border-gray-500 p-4 mt-2 group-hover:border-green-500 ',{
         'bg-green-500':isActiveLesson,
 
     })}>
@@ -46,7 +54,7 @@ export function Lesson (props: LessonProps){
             Conteudo Liberado
             </span>
         ) : (
-          <span className="text-sm text-orange-500 font-medium flex items-center gap-2 disabled:true">
+          <span className="text-sm text-orange-500 font-medium flex items-center gap-2 " >
         <Lock size={20} />
           Em breve
           </span>

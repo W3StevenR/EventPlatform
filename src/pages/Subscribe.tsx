@@ -72,9 +72,7 @@ return(
             </div>
 
             </div>
-                
-        
-        <img src ="/src/assents/code-mockup2.png" className="mt-10" alt=""/>
+        <img src ="/src/assents/code-mockup.png" className="mt-0" alt=""/>
          </div>
 );
 

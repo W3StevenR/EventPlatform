@@ -6,9 +6,9 @@ export function Event(){
   const {slug} = useParams<{slug : string}>()
 
 return(
-  <div className="flex flex-col min-h-screen">
+  <div className="flex flex-col min-h-screen block">
   <Header /> 
-  <main className="flex flex-1">
+  <main className="flex flex-1 display">
       {slug ? <Video lessonSlug={slug}/> : <div className="flex-1"/>}
     <Sidebar/>
   </main> 

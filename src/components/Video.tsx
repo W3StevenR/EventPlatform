@@ -56,7 +56,7 @@ if(!data) {
     /** Area do Titulo e Descrição */
     <div className=" flex-1 ">
       <div className= "bg-black flex justify-center">
-      <div className="h-full w-full max-w-[1100px] max-h-[60vh] aspect-video">
+      <div className="h-full w-full max-w-[900px] max-h-[100vh] aspect-video">
         
         <Player> 
           <Youtube videoId = {data.lesson.videoId} />

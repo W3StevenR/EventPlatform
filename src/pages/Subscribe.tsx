@@ -3,6 +3,7 @@ import { useState, FormEvent } from "react";
 import { useNavigate } from "react-router-dom";
 import { Logo } from "../components/Logo";
 import Img1 from "../assents/code-mockup.png" 
+import background from "../assents/blur-background.png" 
 const CREATE_SUBSCRIBE_MUTATION= gql`
     mutation CreateSubscriber ($name:String!, $email:String!){
         createSubscriber(data:{name: $name, email:$email}){
@@ -35,7 +36,7 @@ export function Subscribe(){
     
 
 return(
-    < div className="min-h-screen bg-blur bg-cover bg-no-repeat flex-col items-center">
+    < div style={{ backgroundImage: `url(${background})` }} className="min-h-screen bg-blur bg-cover bg-no-repeat flex-col items-center">
         <div className="w-full max-w-[1100px] flex items-center justify-between mt-20 mx-auto"> 
             <div className="max-w-[640px]">
             <Logo/>

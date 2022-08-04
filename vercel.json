@@ -1,0 +1,8 @@
+{
+    "rewrites": [
+      { "source": "/", "destination": "/event" },
+      { "source": "/event", "destination": "/event/lesson/:slug" },
+      { "source": "/", "destination": "/event/lesson/:slug" }]
+
+    }
+ 

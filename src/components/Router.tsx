@@ -6,9 +6,17 @@ export function Router(){
     return(
         /*:slug (para receber uma  informação dinamica)*/
         <Routes>
-            <Route path="/" element={<Subscribe/>}/>
-            <Route path="/event" element={ <Event/>}/>
-            <Route path="/event/lesson/:slug" element={ <Event/>}/>
+            <Route path="/" element={<Subscribe/>}>
+            
+            </Route>
+
+            <Route path="/event" element={ <Event/>}>
+
+            </Route>
+
+            <Route path="/event/lesson/:slug" element={ <Event/>}> 
+            
+            </Route>
 
             
             </Routes>
